@@ -45,8 +45,8 @@ In this program we need to:
 
 Few comments:
 ---------------
-1. Our proxy server closes connection after sending the response.Our proxy server closes connection after sending the response.
-2. Don't use files to senDon't use files to send error responses, this is very inefficient.
+1. Our proxy server closes connection after sending the response.
+2. Don't use files to send error responses, this is very inefficient.
 3. Each user should be handled in new thread. 
 4. When you fill your sockaddr_in struct, you can use htonl(INADDR_ANY) when assigning sin_addr.s_addr, meaning that the proxy server listen to requests in any of its addresses. 
 5. Don’t have to read the whole server response before sending it to the client.
@@ -99,7 +99,7 @@ Program flow:
 
 Error handling:
 --------------
-1. In any case of wrong command usage, print"Usage: proxyServer <port>  <pool-size> <maxnumber-of-request> <filter>\\n".  
+1. In any case of wrong command usage, print "Usage: proxyServer <port> <pool-size> <maxnumber-of-request> <filter>\\n".  
 2. In any case of a failure before connection with client is set, use perror(“error: <sys_call>\\n”) and exit the program. 
 3. In any case of a failure after the connection with client is set, and in case the error is due to some server-side error (like failure in malloc), send an 500 "Internal Server Error", as in file 500.pdf.
 Don't forget to enter new line after each error message (in the first two cases).
