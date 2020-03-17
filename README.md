@@ -107,6 +107,7 @@ Don't forget to enter new line after each error message (in the first two cases)
 Assumptions:
 --------------
 We will relate only to the method GET (always in the first line), and the header Host (the headers of HTTP request are separated from the possible message by empty line; the Host doesn't have to be the first header!). We can ignore anything else.
+Purely for interest, we add the condition that we can’t visit the www.google.com:80 more than twice in one test
 
 Compile the proxy server:
 ---------------
