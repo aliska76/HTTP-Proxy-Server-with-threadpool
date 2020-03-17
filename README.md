@@ -4,16 +4,17 @@ The proxy server gets an HTTP request from the client, and performs some predefi
 
 Submitted Files
 ---------------
+
 proxyServer.c - an implementation for a basic TCP proxy server written in C
 threadpool.c - an implementation of a threadpool written in C
-threadpool.h
-tester.sh
+threadpool.h - header file with stracts of a threadpool
+tester.sh - program with several tests written in bash
 README for tester.txt - file that describe how to run the tester
-tester_extract.sh - programm that run the tester.sh in bash
+tester_extract.sh - program that can run the tester.sh file, written in bash
 test0.sh - main test with compilation line in bash
-and 6 other tests
+test#.sh - 1 - 6 tests, written in bash
 filter.txt  - filter with list of sites that restrained for visiting
-proxy-files - the folder with pdf files http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces.
+proxy-files - the folder with pdf files wich contain http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces.
 
 proxyServer.c and threadpool.c (the executable file should be called proxyServer).
 
@@ -31,7 +32,7 @@ the request if there is no available thread in the pool.
 
 Command line usage: proxyServer <port> <pool size> <max number of request>
 - Port is the port number your proxy server will listen on.
-- pool size is the number of threads in the pool
+- pool size is the number of threads in the pool.
 - number--of--request is the maximum number of request our server will handle before it terminates (we request is the maximum number of request your server will handle before it terminates (we count also unsuccessful requests). count also unsuccessful requests). This parameter implies that our proxy server does not run forever.This parameter implies that our proxy server does not run forever.
 - Filter is ailter is an absolute path to the filter file. This file contains Host names separated by new line that the proxy will filter. You may see an example of a filter in file filter.
 
