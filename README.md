@@ -13,9 +13,8 @@ tester_extract.sh - programm that run the tester.sh
 test0.sh - main test with compilation line
 and 6 other tests
 filter.txt  - filter with list of sites that restrained for visiting
-proxy-files - the folder with http errors like 400, 403, 404 and etc. Pay close attantion that you named the folder in one word without spaces.
-proxyServer.c and threadpool.c (the executable file should be called
-proxyServer).
+proxy-files - the folder with pdf files http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces.
+proxyServer.c and threadpool.c (the executable file should be called proxyServer).
 
 Program Description
 ---------------
@@ -36,13 +35,12 @@ Command line usage: proxyServer <port> <pool size> <max number of request>
 - Filter is ailter is an absolute path to the filter file. This file contains Host names separated by new line that the proxy will filter. You may see an example of a filter in file filter.
 
 In this program we need to:
----------------
-• Read httpad http-request from socket
-• Check input: the request first line should contain method, path and protocol, and there must be a host header. Here, you only have to check that these tokens exist and the protocol is one of the http. Here, we only have to check that these tokens exist and that the protocol is one of the http versions. Other checks on the method and the path will be checked later. In case the request is wrong, will send 400 "Bad Request" respond, as in file 400.pdf
-• You should support only the GET method, if you get another method, return error message 501 “Method You should support only the GET method, if you get another method, return error message 501 “Method NoNot Implemented", as in file 501.pdf
-• If you can't get the IP of the If you can't get the IP of the target target serverserver (from the (from the HoHosst headert header), send 404 "Not Found" response, as in file), send 404 "Not Found" response, as in file 404.pdf
-• If the requestIf the request directs to a host that appears in the filterhost that -list, return error message 403 “Forbidden” as in file 403.pdf
-• Otherwise, the http request is legal. The The “Host:” header contains server hostname and optionally a port, e.g. header contains server hostname and optionally a port, e.g. www.ynet.co.il:80. If the port does not exist, use 80 as a default port. We will send the request to the server, get his response, and send it back to the client.
+	• Read http -request from socket 
+	• Check input: the request first line should contain method, path and protocol, and there must be a host header. Here, you only 	have to check that these tokens exist and the protocol is one of the http. Here, we only have to check that these tokens exist 		and that the protocol is one of the http versions. Other checks on the method and the path will be checked later. In case the 		request is wrong, will send 400 "Bad Request" respond, as in file 400.pdf
+	• You should support only the GET method, if you get another method, return error message 501 "Method Not Implemented", as in 		file 501.pdf
+	• If you can't get the IP of the target server (from the Host header), send 404 "Not Found" response, as in file 404.pdf
+	• If the requestIf the request directs to a host that appears in the filterhost that -list, return error message 403 “Forbidden” 	 as in file 403.pdf
+	• Otherwise, the http request is legal. The The “Host:” header contains server hostname and optionally a port, e.g. header 		contains server hostname and optionally a port, e.g. www.ynet.co.il:80. If the port does not exist, use 80 as a default port. We 	 will send the request to the server, get his response, and send it back to the client.
 
 Few comments:
 ---------------
