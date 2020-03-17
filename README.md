@@ -125,7 +125,7 @@ The tester extracts, tests & logs.
 In grades file you can see if you pass the tests of the tester
 
 USAGE:
-1. copy your TAR into the tester's folder (must be of the form ID_<id>_work.tar, e.g. ID_111111111_work.tar)
+1. copy your TAR into the tester's folder (must be of the form ID_111111111_work.tar, e.g. ID_111111111_work.tar)
 to create tar archive use line:
 tar -cvf ID_111111111_work.tar proxyServer.c threadpool.c proxy-files filter.txt
 2. run: ./tester_extract.sh ID_111111111_work.tar
