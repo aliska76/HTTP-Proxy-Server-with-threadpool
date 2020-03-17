@@ -59,14 +59,14 @@ We will implement the functions in threadpool.h
 The server should first init the thread pool by calling the function create_threadpool(int). This function gets the size of the pool.
 create_threadpool should: 
 1. Check the legacy of the parameter.
-2. Create threadpool structure and initialize it:
-a. num_thread = given parameter; 
-b. qsize=0; 
-c. threads = pointer to <num_thread> threads; 
-d. qhead = qtail = NULL; 
-e. Init lock and condition variables; 
-f. shutdown = dont_accept = 0; 
-g. Create the threads with do_work as execution function and the pool as an argument.
+2. Create threadpool structure and initialize it: 
+	a. num_thread = given parameter; 
+	b. qsize=0; 
+	c. threads = pointer to <num_thread> threads; 
+	d. qhead = qtail = NULL; 
+	e. Init lock and condition variables; 
+	f. shutdown = dont_accept = 0; 
+	g. Create the threads with do_work as execution function and the pool as an argument.
 
 do_work 
 -------
