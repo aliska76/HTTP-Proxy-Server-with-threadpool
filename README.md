@@ -1,6 +1,6 @@
 # HTTP-Proxy-Server-with-threadpool
 In this project implements on C ansi HTTP Proxy Server with threadpool and limited subset of the entire HTTP specification.
-The proxy server gets an HTTP request from the client, and performs some predefined checks on it. If the request is found legal, it forwards the request to the appropriate web server, and sends the response back to the client. Otherwise, it send s a response to the client without sending anything to the server. Only IPv4 connections should be supported. This project written on Linux operating system I hope it will help you to understand how to work connection between server and client and how work a proxy server.
+The proxy server gets an HTTP request from the client, and performs some predefined checks on it. If the request is found legal, it forwards the request to the appropriate web server, and sends the response back to the client. Otherwise, it send s a response to the client without sending anything to the server. Only IPv4 connections should be supported. This project written on Linux operating system on C. I hope it will help you to understand how to work connection between server and client and how work a proxy server.
 
 Submitted Files
 ---------------
