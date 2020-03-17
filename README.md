@@ -95,7 +95,7 @@ do_work should run in an endless loop and:
 
 dispatch
 ---------
-Dispatch gets the pool, pointer to the thread execution routine and argument to dispatch execution routine. Dispatch should:
+Dispatch gets the pool, pointer to the thread execution routine and argument to thread execution routine. Dispatch should:
 1. Create work_t structure and init it with the routine and argument.
 2. If destroy function has begun, don't accept new item to the queue
 3. Add item to the queue
