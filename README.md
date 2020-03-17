@@ -9,11 +9,12 @@ threadpool.c - an implementation of a threadpool written in C
 threadpool.h
 tester.sh
 README for tester.txt - file that describe how to run the tester
-tester_extract.sh - programm that run the tester.sh 
-test0.sh - main test with compilation line
+tester_extract.sh - programm that run the tester.sh in bash
+test0.sh - main test with compilation line in bash
 and 6 other tests
 filter.txt  - filter with list of sites that restrained for visiting
 proxy-files - the folder with pdf files http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces.
+
 proxyServer.c and threadpool.c (the executable file should be called proxyServer).
 
 Program Description
@@ -114,15 +115,14 @@ makefile:
 	gcc -Wall *.c threadpool.h -o proxyServer -lpthread
 
 Remember that you have to compile with the –lpthread flag.
+
 Test the code:
 ---------------
 You can use a browser. Set the proxy settings to your proxy, e.g. localhost and 8000 if you are testing the proxy on the same PC and it is listening on port 8000. This project was wrote on Ubuntu (Linux) and run in the terminal.
 
-Tester HTTP Prox Server:
-The tester extracts, tests & grades.
-
-PRE:
-chmod +x *.sh
+Tester HTTP Proxy Server:
+The tester extracts, tests & logs.
+In grades file you can see if you pass the tests of the tester
 
 USAGE:
 1. copy your TAR into the tester's folder (must be of the form ID_<id>_work.tar, e.g. ID_111111111_work.tar)
