@@ -108,7 +108,7 @@ Dispatch gets the pool, pointer to the thread execution routine and argument to 
 6. Free whatever you have to free.
 Program flow:
 1. Server creates pool of threads, threads wait for jobs.
-2. Server accept a new connection from a client (aka a new socket fd)
+2. Server accept a new connection from a client (also known as a new socket fd)
 3. Server dispatch a job - call dispatch with the main negotiation function and fd as a parameter. dispatch will add work_t item to the queue.
 4. When there will be an available thread, it will takes a job from the queue and run the negotiation function.
 
