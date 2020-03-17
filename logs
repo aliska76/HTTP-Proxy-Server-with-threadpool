@@ -1,0 +1,85 @@
+------------ TEST 0 (Compilation) ------------
+
+Test Result: Clean Compilation
+---------- END TEST 0 (Compilation) ----------
+------------ TEST 1 ------------
+Description: Non existing URL
+Expexted Result: 404 Not Found
+Actual Result:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 98   112   98   110    0     0    262      0 --:--:-- --:--:-- --:--:--   261 98   112   98   110    0     0    262      0 --:--:-- --:--:-- --:--:--   261
+curl: (18) transfer closed with 2 bytes remaining to read
+HTTP/1.0 404 Not Found
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 112
+Connection: close
+
+<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>
+<BODY><H4>404 Not Found</H4>
+File not found.
+</BODY></HTML>
+
+Test Result: PASS
+---------- END TEST 1 ----------
+------------ TEST 2 ------------
+Description: Forbidden URL
+Expexted Result: 403 Forbidden
+Actual Result:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 98   111   98   109    0     0   1211      0 --:--:-- --:--:-- --:--:--  1211
+curl: (18) transfer closed with 2 bytes remaining to read
+HTTP/1.0 403 Forbidden
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 111
+Connection: close
+
+<HTML><HEAD><TITLE>403 Forbidden</TITLE></HEAD>
+<BODY><H4>403 Forbidden</H4>
+Access denied.
+</BODY></HTML>
+
+Test Result: PASS
+---------- END TEST 2 ----------
+------------ TEST 3 ------------
+Description: Unsupported Method
+Expexted Result: 501 Not supported
+Actual Result:   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 98   129   98   127    0     0  21166      0 --:--:-- --:--:-- --:--:-- 21166
+curl: (18) transfer closed with 2 bytes remaining to read
+HTTP/1.0 501 Not supported
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 129
+Connection: close
+
+<HTML><HEAD><TITLE>501 Not supported</TITLE></HEAD>
+<BODY><H4>501 Not supported</H4>
+Method is not supported.
+</BODY></HTML>
+
+Test Result: PASS
+---------- END TEST 3 ----------
+------------ TEST 4 ------------
+Description: Max Requests
+Expexted Result: 2/3 Succeeded: [200, 200, 000]
+Request 1: 200
+Request 2: 200
+Request 3: 000
+
+Actual Result: [200, 200, 000]
+
+Test Result: PASS
+---------- END TEST 4 ----------
+------------ TEST 5 ------------
+Description: Concurrent Requests
+Expexted Result: keep alive
+Test Result: PASS
+---------- END TEST 5 ----------
+------------ TEST 6 ------------
+Description: robustness test - queue
+Expexted Result: keep alive
+Test Result: PASS
+---------- END TEST 6 ----------
