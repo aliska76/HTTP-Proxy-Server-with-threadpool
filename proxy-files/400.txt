@@ -1,0 +1,10 @@
+HTTP/1.0 400 Bad Request
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 113
+Connection: close
+
+<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>
+<BODY><H4>400 Bad request</H4>
+Bad Request.
+</BODY></HTML>

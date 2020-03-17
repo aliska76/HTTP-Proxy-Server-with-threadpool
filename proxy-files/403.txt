@@ -1,0 +1,10 @@
+HTTP/1.0 403 Forbidden
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 111
+Connection: close
+
+<HTML><HEAD><TITLE>403 Forbidden</TITLE></HEAD>
+<BODY><H4>403 Forbidden</H4>
+Access denied.
+</BODY></HTML>

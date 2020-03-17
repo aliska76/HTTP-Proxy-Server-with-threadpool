@@ -1,0 +1,10 @@
+HTTP/1.0 404 Not Found
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 112
+Connection: close
+
+<HTML><HEAD><TITLE>404 Not Found</TITLE></HEAD>
+<BODY><H4>404 Not Found</H4>
+File not found.
+</BODY></HTML>

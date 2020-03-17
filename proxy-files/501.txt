@@ -1,0 +1,10 @@
+HTTP/1.0 501 Not supported
+Server: webserver/1.0
+Content-Type: text/html
+Content-Length: 129
+Connection: close
+
+<HTML><HEAD><TITLE>501 Not supported</TITLE></HEAD>
+<BODY><H4>501 Not supported</H4>
+Method is not supported.
+</BODY></HTML>
