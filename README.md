@@ -37,17 +37,17 @@ Command line usage: proxyServer <port> <pool size> <max number of request>
 
 In this program we need to: 
 
-	• Read http -request from socket. 
+• Read http -request from socket. 
 	
-	• Check input: the request first line should contain method, path and protocol, and there must be a host header. Here, you only 	have to check that these tokens exist and the protocol is one of the http. Here, we only have to check that these tokens exist 		and that the protocol is one of the http versions. Other checks on the method and the path will be checked later. In case the 		request is wrong, will send 400 "Bad Request" respond, as in file 400.pdf. 
+• Check input: the request first line should contain method, path and protocol, and there must be a host header. Here, you only 	have to check that these tokens exist and the protocol is one of the http. Here, we only have to check that these tokens exist 		and that the protocol is one of the http versions. Other checks on the method and the path will be checked later. In case the 		request is wrong, will send 400 "Bad Request" respond, as in file 400.pdf. 
 	
-	• You should support only the GET method, if you get another method, return error message 501 "Method Not Implemented", as in 		file 501.pdf
+• You should support only the GET method, if you get another method, return error message 501 "Method Not Implemented", as in 		file 501.pdf
 	
-	• If you can't get the IP of the target server (from the Host header), send 404 "Not Found" response, as in file 404.pdf 
+• If you can't get the IP of the target server (from the Host header), send 404 "Not Found" response, as in file 404.pdf 
 	
-	• If the requestIf the request directs to a host that appears in the filterhost that -list, return error message 403 “Forbidden” 	 as in file 403.pdf 
+• If the requestIf the request directs to a host that appears in the filterhost that -list, return error message 403 “Forbidden” 	 as in file 403.pdf 
 	
-	• Otherwise, the http request is legal. The The “Host:” header contains server hostname and optionally a port, e.g. header 		contains server hostname and optionally a port, e.g. www.ynet.co.il:80. If the port does not exist, use 80 as a default port. We 	 will send the request to the server, get his response, and send it back to the client. 
+• Otherwise, the http request is legal. The The “Host:” header contains server hostname and optionally a port, e.g. header 		contains server hostname and optionally a port, e.g. www.ynet.co.il:80. If the port does not exist, use 80 as a default port. We 	 will send the request to the server, get his response, and send it back to the client. 
 	
 
 Few comments:
