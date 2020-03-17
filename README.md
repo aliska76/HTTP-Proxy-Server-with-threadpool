@@ -4,17 +4,16 @@ The proxy server gets an HTTP request from the client, and performs some predefi
 
 Submitted Files
 ---------------
-
-proxyServer.c - an implementation for a basic TCP proxy server written in C
-threadpool.c - an implementation of a threadpool written in C
-threadpool.h - header file with stracts of a threadpool
-tester.sh - program with several tests written in bash
-README for tester.txt - file that describe how to run the tester
-tester_extract.sh - program that can run the tester.sh file, written in bash
-test0.sh - main test with compilation line in bash
-test#.sh - 1 - 6 tests, written in bash
-filter.txt  - filter with list of sites that restrained for visiting
-proxy-files - the folder with pdf files wich contain http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces.
+	proxyServer.c - an implementation for a basic TCP proxy server written in C. 
+	threadpool.c - an implementation of a threadpool written in C. 
+	threadpool.h - header file with stracts of a threadpool. 
+	tester.sh - program with several tests written in bash. 
+	README for tester.txt - file that describe how to run the tester. 
+	tester_extract.sh - program that can run the tester.sh file, written in bash. 
+	test0.sh - main test with compilation line in bash. 
+	test#.sh - 1 - 6 tests, written in bash. 
+	filter.txt  - filter with list of sites that restrained for visiting. 
+	proxy-files - the folder with pdf files wich contain http errors like 400, 403, 404 and etc. Please pay close attantion that you named the folder in one word without spaces. 
 
 proxyServer.c and threadpool.c (the executable file should be called proxyServer).
 
