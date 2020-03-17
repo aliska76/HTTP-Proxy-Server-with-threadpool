@@ -1,6 +1,6 @@
 Tester HTTP Proxy Server
 
-The tester extracts, tests & grades.
+The tester extracts, tests & logs.
 
 
 PRE:
