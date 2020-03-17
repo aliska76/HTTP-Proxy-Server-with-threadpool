@@ -16,8 +16,10 @@ filter.txt  - filter with list of sites that restrained for visiting
 proxy-files - the folder with http errors like 400, 403, 404 and etc. Pay close attantion that you named the folder in one word without spaces.
 proxyServer.c and threadpool.c (the executable file should be called
 proxyServer).
+
 Program Description
 ---------------
+
 The server should handle the connections with the clients. As we saw in class, when using
 TCP, a server creates a socket for each client it talks to. In other words, there is always one socket
 where the server listens to connections and for each client connection request, the server opens
@@ -27,7 +29,7 @@ threads, it construct a thread pool. In other words, the server create the pool 
 and each time it needs a thread to handle a client connection, it take one from the pool or enqueue
 the request if there is no available thread in the pool.
 
-Command line usage: proxyServer <port> <pool size> <max number of requ est> <
+Command line usage: proxyServer <port> <pool size> <max number of request>
 - Port is the port number your proxy server will listen on.
 - pool size is the number of threads in the pool
 - number--of--request is the maximum number of request our server will handle before it terminates (we request is the maximum number of request your server will handle before it terminates (we count also unsuccessful requests). count also unsuccessful requests). This parameter implies that our proxy server does not run forever.This parameter implies that our proxy server does not run forever.
@@ -66,8 +68,9 @@ d. qhead = qtail = NULL
 e. Init lock and condition variables.
 f. shutdown = dont_accept = 0
 g. Create the threads with do_work as execution function and the pool as an argument.
-do_work should
----------------
+
+do_work 
+-------
 do_work should run in an endless loop and:
 1. If destruction process has begun, exit thread
 2. If the queue is empty, wait (no job to make)
@@ -82,7 +85,7 @@ Dispatch gets the pool, pointer to the thread execution routine and argument to 
 1. Create work_t structure and init it with the routine and argument.
 2. If destroy function has begun, don't accept new item to the queue
 3. Add item to the queue
-*destroy_threadpool*
+	*destroy_threadpool*
 1. Set don’t_accept flag to 1
 2. Wait for queue to become empty
 3. Set shutdown flag to 1
