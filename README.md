@@ -117,3 +117,19 @@ Remember that you have to compile with the –lpthread flag.
 Test the code:
 ---------------
 You can use a browser. Set the proxy settings to your proxy, e.g. localhost and 8000 if you are testing the proxy on the same PC and it is listening on port 8000. This project was wrote on Ubuntu (Linux) and run in the terminal.
+
+Tester HTTP Prox Server:
+The tester extracts, tests & grades.
+
+PRE:
+chmod +x *.sh
+
+USAGE:
+1. copy your TAR into the tester's folder (must be of the form ID_<id>_work.tar, e.g. ID_111111111_work.tar)
+to create tar archive use line:
+tar -cvf ID_111111111_work.tar proxyServer.c threadpool.c proxy-files filter.txt
+2. run: ./tester_extract.sh ID_111111111_work.tar
+
+Results:
+1. the results log file will be generated under the logs folder
+2. the tests grades will appear in grades.csv (1 = pass, 0 = fail)
